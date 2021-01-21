@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RTMP-ExoPlayer</string>
+    <string name="app_description">This is a sample to play Real Time RTMP videos/audios using ExoPlayer</string>
+</resources>
