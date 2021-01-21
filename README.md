@@ -2,7 +2,7 @@
 
 This is a sample to stream Real Time RTMP videos/audios using ExoPlayer last version.
 
-you can stream both video and audio in this repository.
+You can stream both video and audio in this repository.
 
 
 ### NOTE: replace your rtmp url with application's url
