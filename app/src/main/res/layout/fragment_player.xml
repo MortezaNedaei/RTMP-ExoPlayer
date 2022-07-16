@@ -9,8 +9,8 @@
     android:keepScreenOn="true"
     tools:context=".ui.player.PlayerFragment">
 
-    <com.google.android.exoplayer2.ui.PlayerView
-        android:id="@+id/simple_player"
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:id="@+id/styled_player"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1.5:1"
@@ -26,7 +26,7 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simple_player" />
+        app:layout_constraintTop_toBottomOf="@+id/styled_player" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
