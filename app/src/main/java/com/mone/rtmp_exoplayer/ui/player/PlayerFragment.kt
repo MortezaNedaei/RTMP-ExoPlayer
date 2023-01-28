@@ -22,15 +22,21 @@ class PlayerFragment : Fragment() {
     private lateinit var binding: FragmentPlayerBinding
     private val viewModel by viewModels<PlayerViewModel>()
     private lateinit var exoPlayer: ExoPlayer
-    private val url = "rtmp://192.168.1.52/LiveApp/test"
-    // audio: rtmp://202.123.27.133:1935/bestfm/livestream
+    private lateinit var url: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        url = arguments?.getString("url") ?: ""
         binding = FragmentPlayerBinding.inflate(layoutInflater, container, false)
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        exoPlayer.stop()
+        exoPlayer.release()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
