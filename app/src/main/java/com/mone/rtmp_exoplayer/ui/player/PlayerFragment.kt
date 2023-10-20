@@ -7,14 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.ext.rtmp.RtmpDataSource
-import com.google.android.exoplayer2.source.ProgressiveMediaSource
-import com.google.android.exoplayer2.trackselection.AdaptiveTrackSelection
-import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
-import com.google.android.exoplayer2.ui.StyledPlayerView
-import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter
+import androidx.media3.common.MediaItem
+import androidx.media3.datasource.rtmp.RtmpDataSource
+import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.source.ProgressiveMediaSource
+import androidx.media3.exoplayer.trackselection.AdaptiveTrackSelection
+import androidx.media3.exoplayer.trackselection.DefaultTrackSelector
+import androidx.media3.exoplayer.upstream.DefaultBandwidthMeter
+import androidx.media3.ui.PlayerView
 import com.mone.rtmp_exoplayer.databinding.FragmentPlayerBinding
 
 class PlayerFragment : Fragment() {
@@ -66,7 +66,7 @@ class PlayerFragment : Fragment() {
             .build()
 
         binding.styledPlayer.player = exoPlayer
-        binding.styledPlayer.setShowBuffering(StyledPlayerView.SHOW_BUFFERING_ALWAYS)
+        binding.styledPlayer.setShowBuffering(PlayerView.SHOW_BUFFERING_ALWAYS)
     }
 
     /**
